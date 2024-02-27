@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <div class="logo">
+            <a href="homepage.html">
+            <img width="100" src="/image/channels4_profile.jpg" alt="Restaurant logo">
+            </a>
+            </div>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Mogu Mogu</h2>
+            <p>Welcome to Mogo Mogu, where every dish is a journey through the rich flavors and traditions of Japan. At Mogo Mogu, we pride ourselves on serving authentic Japanese cuisine crafted with care and passion. From delicate sushi rolls bursting with fresh, vibrant ingredients to hearty bowls of steaming ramen, each dish is a celebration of Japan's culinary heritage. Our chefs meticulously source the finest ingredients to ensure every bite is a delight for the senses. Whether you're a sushi connoisseur or new to Japanese cuisine, we invite you to embark on a culinary adventure with us at Mogo Mogu. Immerse yourself in the flavors of Japan and experience the true essence of umami. Join us and indulge in the art of Japanese dining at Mogu Mogu.</p>
+        </section>
+
+        <div class="container">
+        <section class="featured-dishes">
+        
+            <div class="featured-dishes-container">
+               
+                <div class="dish">
+                <img src="image/dish1.jpg" alt="California Rolls" class="dish-image">
+               </div> 
+               
+               <div class="dish">
+                <img src="/image/dish2.jpg" alt="Poki Bowl" class="dish-image">
+               </div>
+               
+               <div class="dish">
+                <img src="/image/dish3.jpg" alt="Soyu Ramen" class="dish-image">
+               </div>
+               
+               <div class="dish">
+                <img src="/image/dish4.jpg" alt="Takoyaki" class="dish-image">
+               </div>
+
+               <div class="dish">
+                <img src="/image/dish5.webp" alt="Curry" class="dish-image">
+               </div>
+            
+            </div>
+        </section>
+        </div>
+        
+        <div class="button-container">
+            <button id="previousButton">Previous</button>
+            <button id="nextButton">Next</button>
+        </div>
+        
+        <section class="reservation-form">
+            <h2>Make a Reservation</h2>
+            <form id="reservationForm" action="reservation_form.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="video">
+            <h2>Experience Our Ambiance</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PC2rAUdpGXM?si=HwRcKl4r4EwSTql6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
