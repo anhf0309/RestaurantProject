@@ -41,8 +41,14 @@ li a:hover:not(.active) {
 main {
     background-color: #abbfb37e;
 }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-h2, h3 {
+h2 {
+    opacity: 0;
+    animation: fadeIn 8s ease forwards;
     text-align: center;
 }
 

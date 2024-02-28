@@ -1,4 +1,8 @@
 
+// welcome text animation
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('h2').classList.add('fade-in');
+});
 //home page photos
 const dishImages = document.querySelectorAll('.dish-image');
 dishImages[0].style.display = 'block'; // Show the first image
@@ -24,6 +28,10 @@ document.getElementById('previousButton').addEventListener('click',() => {
     }
     dishImages[currentImageIndex].style.display = 'block';
 });
+
+//homepage reservation form
+
+
 
 //contact us page
 /*document.addEventListener('DOMContentLoaded', function() {
