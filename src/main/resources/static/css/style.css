@@ -1,5 +1,5 @@
 body {
-    background-image: url(/src/main/resources/static/images/backgrround.jpg);
+    background-image: url("../images/backgrround.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -163,7 +163,7 @@ h2 {
 
 
 footer {
-    background-color: #596e6d;
+    background-color: #1c422b;
 }
 
 /*menu*/
@@ -186,7 +186,7 @@ footer {
 
 .menu-table th,
 .menu-table td {
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 8px;
     text-align: center;
 }
