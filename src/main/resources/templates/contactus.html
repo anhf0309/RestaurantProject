@@ -29,11 +29,11 @@
                 <h2 id="contact-text">Let's keep intouch</h2>
                 <form id="contactForm" th:action="@{/submit_form}" method="POST">
                     <label path="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br>
+                    <label for="name"></label><input type="text" id="name" name="name" required><br>
                     <label path="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br>
+                    <label for="email"></label><input type="email" id="email" name="email" required><br>
                     <label path="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea><br>
+                    <label for="message"></label><textarea id="message" name="message" required></textarea><br>
                     <button type="submit">Submit</button>
                 </form>
             </section>

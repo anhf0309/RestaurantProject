@@ -64,13 +64,21 @@
             <h2>Make a Reservation</h2>
             <form id="reservationForm" th:action="@{/reservation_form}" method="post">
                 <label path="name">Name:</label>
-                <input type="text" name="name" required>
+                <label>
+                    <input type="text" name="name" required>
+                </label>
                 <label path="email">Email:</label>
-                <input type="email" name="email" required>
+                <label>
+                    <input type="email" name="email" required>
+                </label>
                 <label path="date">Date:</label>
-                <input type="date" name="date" required>
+                <label>
+                    <input type="date" name="date" required>
+                </label>
                 <label path="time">Time:</label>
-                <input type="time" name="time" required>
+                <label>
+                    <input type="time" name="time" required>
+                </label>
                 <button type="submit">Submit</button>
             </form>
         </section>
