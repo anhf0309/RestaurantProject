@@ -1,5 +1,5 @@
 body {
-    background-image: url(/image/backgrround.jpg);
+    background-image: url(/src/main/resources/static/images/backgrround.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -48,7 +48,7 @@ main {
 
 h2 {
     opacity: 0;
-    animation: fadeIn 8s ease forwards;
+    animation: fadeIn 5s ease forwards;
     text-align: center;
 }
 
