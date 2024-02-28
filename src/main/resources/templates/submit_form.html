@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submitted</title>
     <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 <h1>
     <div class="logo">
-        <a href="homepage.html">
-        <img width="176" src="../static/images/channels4_profile.jpg" alt="Restaurant logo">
+        <a href="homepage">
+        <img width="176" src="/images/channels4_profile.jpg" alt="Restaurant logo">
         </a>
         </div>
 </h1>
 <nav>
     <ul>
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="homepage">Home</a></li>
+        <li><a href="menu">Menu</a></li>
+        <li><a href="contactus">Contact Us</a></li>
     </ul>
 </nav>
 </head>
 <body>
     <h1 id="form_text">Email has been sent!</h1>
+    <p th:text="${name}"></p>
+    <p>We have received your message, please look out for a response email from us in approximately 1-3 business days to your email at: </p>
+    <p th:text="${email}"></p>
     <footer>
         <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
     </footer>

@@ -6,7 +6,8 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     font-family: 'Tillana', sans-serif;
-    color: rgb(224, 233, 233);
+    color: white;
+    background-color: rgba(9, 52, 52, 0.251);
     
 }
 ul {

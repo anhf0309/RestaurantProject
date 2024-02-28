@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Restaurant Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
         <h1>
             <div class="logo">
-            <a href="homepage.html">
-            <img src="../static/images/channels4_profile.jpg" alt="Restaurant logo" width="176"/>
+            <a href="homepage">
+            <img src="/images/channels4_profile.jpg" alt="Restaurant logo" width="176"/>
             </a>
             </div>
         </h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="menu">Menu</a></li>
+                <li><a href="contactus">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -36,23 +36,19 @@
             <div class="featured-dishes-container">
                
                 <div class="dish">
-                <img src="../static/images/dish1.jpg" alt="California Rolls" class="dish-image">
+                <img src="/images/dish1.jpg" alt="California Rolls" class="dish-image">
                </div> 
                
                <div class="dish">
-                <img src="../static/images/dish2.jpg" alt="Poki Bowl" class="dish-image">
+                <img src="/images/dish2.jpg" alt="Poke Bowl" class="dish-image">
                </div>
                
                <div class="dish">
-                <img src="../static/images/dish3.jpg" alt="Soyu Ramen" class="dish-image">
+                <img src="/images/dish3.jpg" alt="Shoyu Ramen" class="dish-image">
                </div>
                
                <div class="dish">
-                <img src="../static/images/dish4.jpg" alt="Takoyaki" class="dish-image">
-               </div>
-
-               <div class="dish">
-                <img src="/images/dish5.webp" alt="Curry" class="dish-image">
+                <img src="/images/dish4.jpg" alt="Takoyaki" class="dish-image">
                </div>
             
             </div>
@@ -66,15 +62,15 @@
         
         <section class="reservation-form">
             <h2>Make a Reservation</h2>
-            <form id="reservationForm" action="reservation_form.html" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required>
+            <form id="reservationForm" th:action="@{/reservation_form}" method="post">
+                <label path="name">Name:</label>
+                <input type="text" name="name" required>
+                <label path="email">Email:</label>
+                <input type="email" name="email" required>
+                <label path="date">Date:</label>
+                <input type="date" name="date" required>
+                <label path="time">Time:</label>
+                <input type="time" name="time" required>
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -87,6 +83,6 @@
     <footer>
         <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
     </footer>
-    <script src="../static/js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.orgin.model;
+package com.orgin;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
