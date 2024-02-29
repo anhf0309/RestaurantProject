@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Controller
 public class ReservationController {
-    private final Map<String, Reservation> reservationMap = new HashMap<>();
+    //private final Map<String, Reservation> reservationMap = new HashMap<>();
 
     @GetMapping("/homepage")
     public String resForm() {

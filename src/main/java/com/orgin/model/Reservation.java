@@ -21,7 +21,7 @@ public class Reservation {
     Date date;
     String time;
 
-    public Reservation(String name, String email, Date date, String time, String confirmationNumber) {
+    public Reservation(String name, String email, Date date, String time) {
         this.name = name;
         this.email = email;
         this.date = date;
