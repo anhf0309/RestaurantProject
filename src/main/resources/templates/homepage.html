@@ -1,89 +1,113 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.73);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(75, 129, 109, 0.77);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <div class="logo">
+<header>
+    <h1>
+        <div class="logo">
             <a href="homepage">
-            <img src="/images/channels4_profile.jpg" alt="Restaurant logo" width="176"/>
+                <img src="/images/channels4_profile.jpg" alt="Restaurant logo" width="176"/>
             </a>
-            </div>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="menu">Menu</a></li>
-                <li><a href="contactus">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="welcome">
-            <h2 class="fade-in">Welcome to Mogu Mogu</h2>
-            <p>Welcome to Mogo Mogu, where every dish is a journey through the rich flavors and traditions of Japan. At Mogo Mogu, we pride ourselves on serving authentic Japanese cuisine crafted with care and passion. From delicate sushi rolls bursting with fresh, vibrant ingredients to hearty bowls of steaming ramen, each dish is a celebration of Japan's culinary heritage. Our chefs meticulously source the finest ingredients to ensure every bite is a delight for the senses. Whether you're a sushi connoisseur or new to Japanese cuisine, we invite you to embark on a culinary adventure with us at Mogo Mogu. Immerse yourself in the flavors of Japan and experience the true essence of umami. Join us and indulge in the art of Japanese dining at Mogu Mogu.</p>
-        </section>
+        </div>
+    </h1>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Home</a>
+                <div class="dropdown-content">
+                    <a href="#featured-dishes">Feature Dishes</a>
+                    <a href="#reservationForm">Make a Reservation</a>
+                    <a href="#video">Inside Our Restaurant</a>
+                </div>
+            </li>
+            <li><a href="menu">Menu</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="welcome">
+        <h2 class="fade-in">Welcome to Mogu Mogu</h2>
+        <p>Welcome to Mogo Mogu, where every dish is a journey through the rich flavors and traditions of Japan. At Mogo Mogu, we pride ourselves on serving authentic Japanese cuisine crafted with care and passion. From delicate sushi rolls bursting with fresh, vibrant ingredients to hearty bowls of steaming ramen, each dish is a celebration of Japan's culinary heritage. Our chefs meticulously source the finest ingredients to ensure every bite is a delight for the senses. Whether you're a sushi connoisseur or new to Japanese cuisine, we invite you to embark on a culinary adventure with us at Mogo Mogu. Immerse yourself in the flavors of Japan and experience the true essence of umami. Join us and indulge in the art of Japanese dining at Mogu Mogu.</p>
+    </section>
 
-        <div class="container">
-        <section class="featured-dishes">
-        
+    <div class="container">
+        <section id="featured-dishes" class="featured-dishes">
             <div class="featured-dishes-container">
-               
                 <div class="dish">
-                <img src="/images/dish1.jpg" alt="California Rolls" class="dish-image">
-               </div> 
-               
-               <div class="dish">
-                <img src="/images/dish2.jpg" alt="Poke Bowl" class="dish-image">
-               </div>
-               
-               <div class="dish">
-                <img src="/images/dish3.jpg" alt="Shoyu Ramen" class="dish-image">
-               </div>
-               
-               <div class="dish">
-                <img src="/images/dish4.jpg" alt="Takoyaki" class="dish-image">
-               </div>
-            
+                    <img src="/images/dish1.jpg" alt="California Rolls" class="dish-image">
+                </div>
+                <div class="dish">
+                    <img src="/images/dish2.jpg" alt="Poke Bowl" class="dish-image">
+                </div>
+                <div class="dish">
+                    <img src="/images/dish3.jpg" alt="Shoyu Ramen" class="dish-image">
+                </div>
+                <div class="dish">
+                    <img src="/images/dish4.jpg" alt="Takoyaki" class="dish-image">
+                </div>
             </div>
         </section>
-        </div>
-        
-        <div class="button-container">
-            <button id="previousButton">Previous</button>
-            <button id="nextButton">Next</button>
-        </div>
+    </div>
 
-        <section class="reservation-form">
-            <h2>Make a Reservation</h2>
-            <form id="reservationForm" th:action="@{/reservation_form}" method="POST">
-                    <label path="name">Name:</label>
-                    <label for="name"></label><input type="text" id="name" name="name" required><br>
-                    <label path="email">Email:</label>
-                    <label for="email"></label><input type="email" id="email" name="email" required><br>
-                    <label path="date">Date:</label>
-                <label for="date"></label><input type="date" id="date" name="date" required><br>
-                <label path="time">Time:</label>
-                    <label for="time"></label><input type="time" id="time" name="time" required><br>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+    <div class="button-container">
+        <button id="previousButton">Previous</button>
+        <button id="nextButton">Next</button>
+    </div>
 
+    <section id="reservation-form" class="reservation-form">
+        <h2>Make a Reservation</h2>
+        <form id="reservationForm" th:action="@{/reservation_form}" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-        <section class="video">
-            <h2>Experience Our Ambiance</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PC2rAUdpGXM?si=HwRcKl4r4EwSTql6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-    </main>
-    <footer>
-        <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
-    </footer>
-    <script src="/js/script.js"></script>
+    <section id="video" class="video">
+        <h2>Experience Our Ambiance</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PC2rAUdpGXM?si=HwRcKl4r4EwSTql6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+</main>
+<footer>
+    <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
+</footer>
+<script src="/js/script.js"></script>
 </body>
 </html>

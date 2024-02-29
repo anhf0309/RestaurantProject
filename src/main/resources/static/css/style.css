@@ -1,3 +1,5 @@
+/* CSS for the entire website */
+
 body {
     background-image: url("../images/backgrround.jpg");
     background-size: cover;
@@ -8,8 +10,8 @@ body {
     font-family: 'Tillana', sans-serif;
     color: white;
     background-color: rgba(9, 52, 52, 0.251);
-    
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -20,7 +22,6 @@ ul {
 
 li {
     float: left;
-   
 }
 
 li:last-child {
@@ -36,12 +37,13 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #084744;
+    background-color: rgba(75, 129, 109, 0.89);
 }
 
 main {
     background-color: #abbfb37e;
 }
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -72,17 +74,19 @@ h2 {
 .logo {
     display: flex;
     justify-content: center;
-
 }
 
+/* CSS specific to the homepage */
+
 .welcome {
-    max-width: 500px;
-    max-height: 400px;
+    max-width: 80%; /* Adjust max-width to spread out the content more */
     margin: 0 auto;
     padding: 20px;
-    border-radius: 5px;    
+    border-radius: 5px;
     text-align: center;
     background-color: rgba(9, 52, 52, 0.251);
+    margin-top: 40px;
+    margin-bottom: 80px; /* Increase margin-bottom to space out from other sections */
 }
 
 .welcome h2 {
@@ -90,35 +94,31 @@ h2 {
     margin-bottom: 20px;
 }
 
-
-
 .container {
     text-align: center;
+}
+
+.featured-dishes-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow dishes to wrap onto new lines */
 }
-
-.featured-dishes {
-    margin-bottom: 20px;
-}
-
 
 .dish {
-    margin: 10px;
+    margin: 20px; /* Increase margin to space out dishes more */
     text-align: center;
 }
 
 .dish-image {
-    width: 100%; /* Set width to 100% to make it responsive */
-    height: auto;
+    height: 400px;
     display: none;
-    max-width: 530px; /* Optionally, set a maximum width to prevent images from becoming too large on large screens */
+    width: 600px; /* Adjust maximum width of images */
+    justify-content: center;
 }
-
 
 .button-container {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 40px; /* Increase margin-bottom to space out from other sections */
 }
 
 #previousButton, #nextButton {
@@ -129,6 +129,8 @@ h2 {
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 60px;
 }
 
 #previousButton:hover {
@@ -139,10 +141,17 @@ h2 {
     background-color: #084744;
 }
 
-.reservation-form {
+#reservation-form {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    border: rgb(75, 129, 109) solid 0.5px;
+    border-radius: 10px;
+    height: 250px;
+    background: rgba(95, 158, 160, 0.58);
+
 }
 
 .video {
@@ -159,9 +168,6 @@ h2 {
     max-width: 100%;
     max-height: 100%;
 }
-
-
-
 
 footer {
     background-color: #1c422b;
@@ -218,11 +224,11 @@ footer {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
-    height: 150px; 
+    height: 150px;
 }
 
 .contact-form button {
@@ -245,9 +251,6 @@ footer {
     text-align: center;
 }
 
-
-/*submit_form*/
-
 #form_text {
-     color: aliceblue;
+    color: aliceblue;
 }
