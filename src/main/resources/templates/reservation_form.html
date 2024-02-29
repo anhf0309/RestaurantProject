@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>
-            <div class="logo">
+<header>
+    <h1>
+        <div class="logo">
             <a href="homepage">
-            <img width="176" src="/images/channels4_profile.jpg" alt="Restaurant logo">
+                <img src="/images/channels4_profile.jpg" alt="Restaurant logo" width="176"/>
             </a>
-            </div>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="homepage">Home</a></li>
-                <li><a href="menu">Menu</a></li>
-                <li><a href="contactus">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1>Reservation has been received!</h1>
-    <p th:text="${name}"></p>
-    <p>Your confirmation number:</p> <p th:text="${confirmationNumber}"></p>
-    <p>Your reservation details: </p>
-    <p th:text="${date}"></p>
-    <p th:text="${time}"></p>
-    <footer>
-        <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
-    </footer>
+        </div>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="homepage">Home</a></li>
+            <li><a href="menu">Menu</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<h1>Reservation has been received!</h1>
+<p th:text="${name}"></p>
+<p th:text="${email}"></p>
+<p th:text="${date}"></p>
+<p th:text="${time}"></p>
+<p th:text="${confirmationNumber}"></p>
+<footer>
+    <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
+</footer>
 </body>
 </html>
