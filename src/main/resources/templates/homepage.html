@@ -11,14 +11,14 @@
     <header>
         <h1>
             <div class="logo">
-            <a href="homepage">
+            <a href="/templates/homepage">
             <img src="/images/channels4_profile.jpg" alt="Restaurant logo" width="176"/>
             </a>
             </div>
         </h1>
         <nav>
             <ul>
-                <li><a href="homepage">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="menu">Menu</a></li>
                 <li><a href="contactus">Contact Us</a></li>
             </ul>
@@ -68,11 +68,11 @@
                     <label path="email">Email:</label>
                     <label for="email"></label><input type="email" id="email" name="email" required><br>
                     <label path="date">Date:</label>
-                    <label for="date"></label><input type="date" id="date" name="date" th:field="*{#dates}" required><br>
-                    <label path="time">Time:</label>
+                <label for="date"></label><input type="date" id="date" name="date" required><br>
+                <label path="time">Time:</label>
                     <label for="time"></label><input type="time" id="time" name="time" required><br>
-                </form>
                 <button type="submit">Submit</button>
+            </form>
         </section>
 
 

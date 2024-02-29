@@ -29,7 +29,6 @@ public class ReservationController {
        model.addAttribute("email",reservation.getEmail());
        model.addAttribute("date",reservation.getDate());
        model.addAttribute("time",reservation.getTime());
-       model.addAttribute("confirmationNumber",reservation.getConfirmationNumber());
         return "reservation_form";
     }
 }

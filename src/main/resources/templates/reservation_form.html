@@ -24,12 +24,13 @@
         </ul>
     </nav>
 </header>
-<h1>Reservation has been received!</h1>
-<p th:text="${name}"></p>
-<p th:text="${email}"></p>
-<p th:text="${date}"></p>
-<p th:text="${time}"></p>
-<p th:text="${confirmationNumber}"></p>
+<div class="form">
+<h2>Reservation confirmed!</h2>
+    <p>Name: <span th:text="${name}"></span></p>
+    <p>Email:  <span th:text="${email}"></span></p>
+    <p>At: <span th:text="${time}"></span> PST</p>
+    <p>Date: <span th:text="${#dates.format(date, 'yyyy-MM-dd')}"></span></p>
+</div>
 <footer>
     <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
 </footer>

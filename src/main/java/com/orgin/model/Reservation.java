@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-import java.util.UUID;
+
 
 @NoArgsConstructor
 @Getter
@@ -20,17 +20,13 @@ public class Reservation {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     Date date;
     String time;
-    String confirmationNumber;
 
-    public Reservation(String name, String email, Date date, String time) {
+    public Reservation(String name, String email, Date date, String time, String confirmationNumber) {
         this.name = name;
         this.email = email;
         this.date = date;
         this.time = time;
-        this.confirmationNumber = generateConfirmationNumber();
     }
 
-    public String generateConfirmationNumber() {
-        return UUID.randomUUID().toString().substring(0, 8);
-    }
+
 }

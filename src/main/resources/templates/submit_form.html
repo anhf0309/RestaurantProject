@@ -22,10 +22,11 @@
 </nav>
 </head>
 <body>
-    <h1 id="form_text">Email has been sent!</h1>
-    <p th:text="${name}"></p>
-    <p>We have received your message, please look out for a response email from us in approximately 1-3 business days to your email at: </p>
-    <p th:text="${email}"></p>
+    <div class="form">
+    <h2 id="form_text">Email has been sent!</h2>
+    <p>Hi <span th:text="${name}"></span>,</p>
+    <p>Thank you for reaching out. We have received your message, please look out for a response email from us in approximately 1-3 business days to your email at: <span th:text="${email}"></span></p>
+    </div>
     <footer>
         <p>Contact us at: mogumogu@email.com | Phone: 123-456-7890</p>
     </footer>
