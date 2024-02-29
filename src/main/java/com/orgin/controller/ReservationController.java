@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 @Controller
 public class ReservationController {
-    //private final Map<String, Reservation> reservationMap = new HashMap<>();
 
     @GetMapping("/homepage")
     public String resForm() {
